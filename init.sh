@@ -314,7 +314,7 @@ oc project ${OSE_API_APP_DEV} >/dev/null 2>&1
 echo
 echo "Instantiating the application and associated dependencies in the ${OSE_API_APP_DEV} project..."
 echo
-oc process -f "$SCRIPT_BASE_DIR/support/templates/app-template.json" -v=CUSTOM_BASE_IMAGE_TAG=1.0,APPLICATION_NAME=ose-api-app,IMAGE_STREAM_NAMESPACE=${OSE_ENTERPRISE_RESOURCES},IMAGE_STREAM_NAMESPACE=${OSE_ENTERPRISE_RESOURCES} | oc -n ${OSE_API_APP_DEV} create -f- >/dev/null 2>&1
+oc process -f "$SCRIPT_BASE_DIR/support/templates/app-template.json" -v=CUSTOM_BASE_IMAGE_TAG=1.0,APPLICATION_NAME=ose-api-app,IMAGE_STREAM_NAMESPACE=${OSE_ENTERPRISE_RESOURCES} | oc -n ${OSE_API_APP_DEV} create -f- >/dev/null 2>&1
 
 
 oc project ${OSE_API_APP_UAT} >/dev/null 2>&1
